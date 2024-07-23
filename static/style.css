@@ -1,0 +1,130 @@
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    border: 1px solid #E0E0E0;
+}
+
+.content-left {
+    background-color: #D0021B;
+    color: white;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.date {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.title {
+    font-size: 7em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.subtitle {
+    margin: 20px 0;
+    font-size: 0.8em;
+    max-width: 400px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #D0021B;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.content-right {
+    flex: 2;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.content-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-right li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #E0E0E0;
+    margin-right: 10px;
+}

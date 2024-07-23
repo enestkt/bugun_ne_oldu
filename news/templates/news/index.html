@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugün Ne Oldu?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-left">
+            <div class="logo-container">
+                <img src="{% static 'news/images/haberturk-logo.png' %}" alt="Haberturk Logo" class="logo">
+            </div>
+            <div class="date">12.07.2024</div>
+            <div class="title" style="font-family: 'Gemunu Libre', sans-serif;">Bugün ne oldu?</div>
+            <div class="subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</div>
+            <a href="{% url 'news_list' %}" class="button">Görüntüle</a>
+        </div>
+        <div class="content-right">
+            <ul>
+                <li>
+                    <span class="number">01</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <span class="number">02</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <span class="number">03</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <span class="number">04</span>
+                    <p>Maecenas cursus lacus ultrices venenatis sodales.</p>
+                </li>
+                <li>
+                    <span class="number">05</span>
+                    <p>Morbi facilisis leo id eros sodales, id varius magna pellentesque.</p>
+                </li>
+                <li>
+                    <span class="number">06</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <span class="number">07</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <span class="number">08</span>
+                    <p>Maecenas cursus lacus ultrices venenatis sodales.</p>
+                </li>
+                <li>
+                    <span class="number">09</span>
+                    <p>Morbi facilisis leo id eros sodales, id varius magna pellentesque.</p>
+                </li>
+                <li>
+                    <span class="number">10</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

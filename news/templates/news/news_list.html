@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haberler</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="flex">
+        <div class="bg-red-600 text-white p-4 w-64 flex flex-col">
+            <div class="mb-4">
+                <img src="{% static 'news/images/haberturk-logo.png' %}" alt="Haberturk Logo" class="w-32">
+            </div>
+            <nav class="flex-grow">
+                <ul>
+                    <li><a href="{% url 'home' %}" class="block py-2">Anasayfa</a></li>
+                    <li><a href="{% url 'news_list' %}" class="block py-2">Haberler</a></li>
+                    <li><a href="{% url 'category' 1 %}" class="block py-2">Gündem</a></li>
+                    <li><a href="{% url 'category' 2 %}" class="block py-2">Ekonomi</a></li>
+                    <li><a href="{% url 'category' 3 %}" class="block py-2">Spor</a></li>
+                    <li><a href="{% url 'category' 4 %}" class="block py-2">Magazin</a></li>
+                    <li><a href="{% url 'category' 5 %}" class="block py-2">Dünya</a></li>
+                    <li><a href="{% url 'category' 6 %}" class="block py-2">Teknoloji</a></li>
+                    <li><a href="{% url 'category' 7 %}" class="block py-2">Sağlık</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex-1 p-8">
+            <h1 class="text-3xl font-bold mb-4">Haberler</h1>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {% for news in news_list %}
+                    <div class="swiper-slide">
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                            <img src="{{ news.image.url }}" alt="{{ news.title }}" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-xl font-bold mb-2">{{ news.title }}</h2>
+                                <p class="text-gray-600">{{ news.publication_date|date:"d.m.Y H:i" }}</p>
+                                <p class="mt-2 text-gray-700">{{ news.summary }}</p>
+                                <a href="{% url 'news_detail' news.id %}" class="block mt-4 text-blue-600 hover:text-blue-800">Detay</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
